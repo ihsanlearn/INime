@@ -1,9 +1,9 @@
-import Navbar from '@/components/Navbar'
+import AnimeContent from '@/components/AnimeContent'
 
 const Page = () => {
   return (
-    <div>
-      <Navbar title="INime | Website Anime Indonesia" />
+    <div className="px-4">
+      <AnimeContent />
     </div>
   )
 }

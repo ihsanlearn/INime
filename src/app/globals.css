@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+img {
+    transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    -ms-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+}
+
+img:hover {
+    scale: 102%;
+}
+
+.btn-search:active {
+    background-color: grey;
+}
