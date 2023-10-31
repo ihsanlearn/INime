@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 img {
-    transition: .3s all ease-in-out;
-    -webkit-transition: .3s all ease-in-out;
-    -moz-transition: .3s all ease-in-out;
-    -ms-transition: .3s all ease-in-out;
-    -o-transition: .3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
 }
 
 img:hover {
@@ -22,4 +24,42 @@ img:hover {
 
 .btn-search:active {
     background-color: grey;
+}
+
+.custom-loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #ffc639;
+    position: relative;
+    transform-origin: left;
+    animation: h2 1s infinite linear;
+}
+
+.custom-loader::before,
+.custom-loader::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 4px solid #ffc639;
+    transform-origin: 50% calc(100% - 8px);
+    animation: inherit;
+    -webkit-animation: inherit;
+}
+
+.custom-loader::after {
+    inset: auto 0 calc(100% + 4px);
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    transform-origin: 50% calc(200% - 4px);
+}
+
+@keyframes h2 {
+    100% {
+        transform: rotate(1turn);
+    }
 }
